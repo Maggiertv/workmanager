@@ -24,7 +24,7 @@ start %cd%\start.bat
 rem 10 sekunden warten
 cls
 echo Serverfenster muss nach erfolgreichem Neustart geschlossen werden.
-timeout /t 15
+timeout /t 10
 echo -- Datei erstellt und gestartet (Noch 1 Neustart noetig)
 echo -
 set /p Eingabe3=Suche nach Eula und akzeptiere sie...
@@ -46,6 +46,7 @@ cls
 echo Server kann wieder geschlossen werden, sobald "Done!" im Serverfenster steht.
 echo -- Gestartet (Letzter neustart beendet)
 echo -
+echo Der naechste Schritt kann dauern. Bitte nur einmal bestätigen...
 set /p Eingabe5=Veraendere einige Konfigurationseinstellungen des Servers...
 
 if not exist %PFAD2% goto fail:
@@ -109,3 +110,4 @@ echo Hast du den server in server.jar umbenennt?
 echo Hast du beide Dateien im gleichen Verzeichnis?
 set /p fail=Das Verzeichnis konnte nicht gefunden werden...
 goto start:
+rem Copyright by Lukas Koch (Nichtmister)
